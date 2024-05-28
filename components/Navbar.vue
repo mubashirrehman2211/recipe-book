@@ -3,7 +3,7 @@
 <template>
   <nav>
     <div class="flex">
-      <div class="w-[4%]">
+      <div class="w-[4%] ml-5">
         <img src="/public/logo.png" class="w-full rounded-full" alt="logo" />
       </div>
       <div class="all-center m-auto gap-x-16">
