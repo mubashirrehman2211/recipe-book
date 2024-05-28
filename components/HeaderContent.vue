@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import ULoading from "nvd-u/components/ULoading.vue";
+const store = useRecipeStore();
+</script>
 
 <template>
   <div class="border-2 border-[#31a981] bg-[#31a981] w-screen">
