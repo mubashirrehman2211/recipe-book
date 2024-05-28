@@ -31,6 +31,16 @@
             >
           </NuxtLink>
         </div>
+
+        <div>
+          <NuxtLink to="">
+            <span
+              class="text-xl text-gray-800 poppins-medium font-semibold overlay"
+              >RECIPES</span
+            >
+          </NuxtLink>
+        </div>
+
         <div class="ml-60">
           <NuxtLink to="">
             <button
