@@ -1,14 +1,14 @@
 <script setup></script>
 
 <template>
-  <nav class="border-2">
+  <nav>
     <div class="flex">
-      <div class="w-[6%]">
+      <div class="w-[4%]">
         <img src="/public/logo.png" class="w-full rounded-full" alt="logo" />
       </div>
       <div class="all-center m-auto gap-x-16">
         <div>
-          <NuxtLink to="">
+          <NuxtLink to="/">
             <span
               class="text-xl text-gray-800 poppins-medium font-semibold overlay"
               >HOME</span
@@ -16,7 +16,7 @@
           </NuxtLink>
         </div>
         <div>
-          <NuxtLink to="">
+          <NuxtLink to="/about">
             <span
               class="text-xl text-gray-800 poppins-medium font-semibold overlay"
               >ABOUT</span
@@ -24,7 +24,7 @@
           </NuxtLink>
         </div>
         <div>
-          <NuxtLink to="">
+          <NuxtLink to="/contact">
             <span
               class="text-xl text-gray-800 poppins-medium font-semibold overlay"
               >CONTACT US</span
@@ -33,7 +33,7 @@
         </div>
 
         <div>
-          <NuxtLink to="">
+          <NuxtLink to="/recipe">
             <span
               class="text-xl text-gray-800 poppins-medium font-semibold overlay"
               >RECIPES</span

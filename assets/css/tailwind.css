@@ -18,7 +18,6 @@
 
 .overlay {
     position: relative;
-    cursor: pointer;
 }
 
 .overlay:before {
@@ -34,4 +33,25 @@
 
 .overlay:hover:before {
     width: 100%;
+}
+
+.edit-2 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 8s infinite;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+    50% {
+        border-color: #fff;
+    }
+}
+
+/* typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
 }
