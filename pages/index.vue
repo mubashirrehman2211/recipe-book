@@ -1,6 +1,9 @@
-<script setup></script>
+<script setup>
+import Navbar from "~/components/Navbar.vue";
+</script>
 
 <template>
+  <Navbar />
   <div class="border-2 border-[#3bc195] bg-[#3bc195]">
     <ul class="all-center gap-20 text-gray-200 mt-2.5">
       <li>what to eat</li>
