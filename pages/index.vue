@@ -1,5 +1,5 @@
 <script setup>
-import ShieldCheckOutline from "nvd-u/icons/ShieldCheckOutline.vue";
+import ShieldCheckOutline from "./nvd-u/icons/ShieldCheckOutline.vue";
 const store = useRecipeStore();
 onMounted(() => {
   store.loadRecipes();
