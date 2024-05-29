@@ -3,11 +3,11 @@ const store = useRecipeStore();
 </script>
 
 <template>
-  <div v-if="store?.demoRecipes" class="bg-gray-200 py-10">
+  <div class="bg-gray-200 py-10">
     <h2 class="text-4xl text-gray-600 all-center font-semibold poppins-medium">
       Here Some Recipes
     </h2>
-    <div class="grid grid-cols-3 ml-[16%] w-[71%]">
+    <div class="grid grid-cols-3 ml-[16%] w-[71%]" v-if="store?.demoRecipes">
       <div
         v-for="recipe in store?.demoRecipes"
         :key="recipe.id"
@@ -52,7 +52,7 @@ const store = useRecipeStore();
     </div>
   </div>
 
-  <ULoading v-else class="my-[200px]" />
+  <ULoading v-if="!store?.demoRecipes" class="my-[200px]" />
 </template>
 
 <style scoped></style>
