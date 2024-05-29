@@ -6,37 +6,24 @@ import Twitter from "nvd-u/icons/Twitter.vue";
 </script>
 
 <template>
-  <div class="social-icons all-center flex-col mt-10">
-    <h1
-      class="text-2xl text-gray-100 font-semibold poppins-medium tracking-widest"
-    >
-      Get Social with us
-    </h1>
-    <ul class="all-center gap-5">
-      <li
-        class="text-3xl w-10 h-10 all-center border-2 border-[#0077b5] rounded-full bg-[#0077b5] text-white hover:scale-125 duration-500 cursor-pointer"
-      >
-        <Facebook />
-      </li>
-
-      <li
-        class="text-3xl w-10 h-10 all-center border-2 border-white rounded-full bg-white text-red-600 hover:scale-125 duration-500 cursor-pointer"
-      >
-        <Youtube />
-      </li>
-
-      <li
-        class="text-3xl w-10 h-10 all-center border-2 border-[#0077b5] rounded-full bg-[#0077b5] text-white hover:scale-125 duration-500 cursor-pointer"
-      >
-        <Twitter />
-      </li>
-
-      <li
-        class="text-3xl w-10 h-10 all-center border-2 border-white rounded-full bg-white text-[#962fbf] hover:scale-125 duration-500 cursor-pointer"
-      >
-        <Instagram />
-      </li>
-    </ul>
+  <div
+    class="border-2 border-[#33a17c] bg-[#33a17c] text-gray-200 text-center flex justify-around"
+  >
+    <p>Get connected with us on social networks!</p>
+    <div class="all-center gap-5">
+      <Facebook
+        class="text-xl cursor-pointer hover:scale-150 overflow-hidden duration-500"
+      />
+      <Youtube
+        class="text-xl cursor-pointer hover:scale-150 overflow-hidden duration-500"
+      />
+      <Twitter
+        class="text-xl cursor-pointer hover:scale-150 overflow-hidden duration-500"
+      />
+      <Instagram
+        class="text-xl cursor-pointer hover:scale-150 overflow-hidden duration-500"
+      />
+    </div>
   </div>
 </template>
 

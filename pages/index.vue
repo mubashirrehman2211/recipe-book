@@ -40,7 +40,7 @@ onMounted(() => {
 
   <DemoRecipes />
 
-
+  <Footer />
 </template>
 
 <style scoped></style>

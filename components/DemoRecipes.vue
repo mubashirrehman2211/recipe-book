@@ -42,7 +42,7 @@ const store = useRecipeStore();
       </div>
     </div>
     <div class="my-10 all-center">
-      <NuxtLink to="/recipes">
+      <NuxtLink to="/recipe">
         <button
           class="border-2 border-[#3bc195] font-semibold text-gray-100 px-10 h-12 bg-[#3bc195] rounded hover:bg-gray-200 hover:border-gray-200 hover:text-gray-900 duration-700"
         >
