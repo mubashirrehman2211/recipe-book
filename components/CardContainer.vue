@@ -4,7 +4,6 @@ import Navigation from "./nvd-u/icons/Navigation.vue";
 import CheckAll from "./nvd-u/icons/CheckAll.vue";
 import CalendarCheck from "./nvd-u/icons/CalendarCheck.vue";
 import CogBox from "./nvd-u/icons/CogBox.vue";
-import bookOpenVariant from "./nvd-u/icons/bookOpenVariant.vue";
 </script>
 
 <template>
@@ -13,7 +12,6 @@ import bookOpenVariant from "./nvd-u/icons/bookOpenVariant.vue";
       title="Extensive Recipe Collection"
       desc="Discover a vast array of recipes from around the world, catering to all tastes and dietary needs."
     >
-      <bookOpenVariant class="text-4xl" />
     </Card>
 
     <Card
