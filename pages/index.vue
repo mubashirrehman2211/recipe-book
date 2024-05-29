@@ -13,6 +13,7 @@ onMounted(() => {
     <h2 class="text-3xl mt-4 text-gray-600 m-auto font-semibold poppins-medium">
       Why You Choose Cooking Book ?
     </h2>
+
     <CardContainer class="mb-5" />
   </div>
 

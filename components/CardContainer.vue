@@ -4,16 +4,16 @@ import Navigation from "nvd-u/icons/Navigation.vue";
 import CheckAll from "nvd-u/icons/CheckAll.vue";
 import CalendarCheck from "nvd-u/icons/CalendarCheck.vue";
 import CogBox from "nvd-u/icons/CogBox.vue";
-import BookOpenBlankVariantOutline from "nvd-u/icons/BookOpenBlankVariantOutline.vue";
+import ShieldCheck from "nvd-u/icons/ShieldCheck.vue";
 </script>
 
 <template>
   <div class="card-container grid grid-cols-3 mt-10 gap-5">
     <Card
-      title="Extensive Recipe Collection"
-      desc="Discover a vast array of recipes from around the world, catering to all tastes and dietary needs."
+      title="Quality Content"
+      desc="Enjoy high-quality content, including articles, videos, and blogs that inspire and inform."
     >
-      <BookOpenBlankVariantOutline class="text-4xl" />
+      <ShieldCheck class="text-4xl" />
     </Card>
 
     <Card
