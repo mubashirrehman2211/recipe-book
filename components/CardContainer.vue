@@ -1,9 +1,9 @@
 <script setup>
-import ChefHat from "./nvd-u/icons/ChefHat.vue";
-import Navigation from "./nvd-u/icons/Navigation.vue";
-import CheckAll from "./nvd-u/icons/CheckAll.vue";
-import CalendarCheck from "./nvd-u/icons/CalendarCheck.vue";
-import CogBox from "./nvd-u/icons/CogBox.vue";
+import ChefHat from "nvd-u/icons/ChefHat.vue";
+import Navigation from "nvd-u/icons/Navigation.vue";
+import CheckAll from "nvd-u/icons/CheckAll.vue";
+import CalendarCheck from "nvd-u/icons/CalendarCheck.vue";
+import CogBox from "nvd-u/icons/CogBox.vue";
 </script>
 
 <template>
