@@ -16,11 +16,11 @@ const store = useRecipeStore();
       </div>
     </nav>
     <div class="all-center flex-col mt-16">
-      <h2 class="text-7xl text-gray-500 font-thin poppins-medium mb-3 edit-2">
+      <h2 class="text-7xl text-gray-500 font-thin poppins-medium mb-1 edit-2">
         Experience the Difference with
         <span class="text-[#3bc195]">CookingBook.com</span>
-        <h4 class="text-5xl mb-0 mt-1">A Recipe for Every Occasion</h4>
       </h2>
+      <h4 class="text-5xl my-2">A Recipe for Every Occasion</h4>
       <div class="mt-0">
         <NuxtLink to="">
           <button
