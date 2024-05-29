@@ -25,7 +25,7 @@ const store = useRecipeStore();
             {{ recipe?.strCategory }}
           </h2>
           <p
-            class="text-sm text-left justify-start text-gray-500 poppins-medium max-h-10 w-[70%] text-ellipsis overflow-hidden"
+            class="text-sm text-left justify-start text-gray-400 poppins-medium max-h-10 w-[70%] text-ellipsis overflow-hidden"
           >
             {{ recipe?.strCategoryDescription }}
           </p>
