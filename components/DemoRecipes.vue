@@ -50,9 +50,9 @@ const store = useRecipeStore();
         </button>
       </NuxtLink>
     </div>
-  </div>
 
-  <ULoading v-if="!store?.demoRecipes" class="my-[200px]" />
+    <ULoading v-if="!store?.demoRecipes" class="my-[200px]" />
+  </div>
 </template>
 
 <style scoped></style>
