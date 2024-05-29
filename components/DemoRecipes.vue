@@ -3,37 +3,40 @@ const store = useRecipeStore();
 </script>
 
 <template>
-  <div v-if="store?.demoRecipes" class="mt-[200px]">
-    <div class="text-center justify-center">
-      <h2 class="text-gray-900 text-4xl font-semibold poppins-medium">
-        Recipes
-      </h2>
-      <div class="grid grid-cols-3 gap-10 place-items-center">
-        <div v-for="card in store?.demoRecipes" :key="card">
-          <div
-            class="border-2 rounded-md shadow-md all-center flex-col w-full h-[400px] p-4 overflow-hidden"
+  <div v-if="store?.demoRecipes" class="bg-gray-200 py-10">
+    <h2 class="text-4xl text-gray-600 all-center font-semibold poppins-medium">
+      Here Some Recipes
+    </h2>
+    <div class="grid grid-cols-3 ml-[16%] w-[71%]">
+      <div
+        v-for="recipe in store?.demoRecipes"
+        :key="recipe.id"
+        class="bg-yellow-500 w-0 m-0"
+      >
+        <div
+          class="card px-3 w-[400px] min-h-[350px] all-center flex-col relative mx-0"
+        >
+          <img
+            :src="recipe?.strCategoryThumb"
+            class="w-[30%] hover:scale-125 overflow-hidden duration-500"
+            alt="card-img"
+          />
+          <h2 class="text-2xl text-gray-500 poppins-medium">
+            {{ recipe?.strCategory }}
+          </h2>
+          <p
+            class="text-sm text-left justify-start text-gray-500 poppins-medium max-h-10 w-[70%] text-ellipsis overflow-hidden"
           >
-            <div class="">
-              <img
-                :src="card?.strCategoryThumb"
-                class="hover:scale-110 overflow-hidden duration-500"
-                alt="card-image"
-              />
-            </div>
-            <div class="mt-2 all-center">
-              <h2 class="text-2xl font-semibold poppins-medium">
-                {{ card?.strCategory }}
-              </h2>
-            </div>
-            <div class="my-3 all-center">
-              <NuxtLink to="">
-                <button
-                  class="border-2 border-[#3bc195] font-semibold text-gray-100 px-10 h-12 bg-[#3bc195] rounded hover:bg-gray-200 hover:border-gray-200 hover:text-gray-900 duration-700"
-                >
-                  CHECK RECIPES
-                </button>
-              </NuxtLink>
-            </div>
+            {{ recipe?.strCategoryDescription }}
+          </p>
+          <div class="absolute bottom-0 my-3 all-center">
+            <NuxtLink to="/recipes">
+              <button
+                class="border-2 border-[#3bc195] font-semibold text-gray-100 px-3 h-10 bg-[#3bc195] rounded hover:bg-gray-200 hover:border-gray-200 hover:text-gray-900 duration-700"
+              >
+                Check Out
+              </button>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -52,4 +55,4 @@ const store = useRecipeStore();
   <ULoading v-else class="my-[200px]" />
 </template>
 
-<style></style>
+<style scoped></style>

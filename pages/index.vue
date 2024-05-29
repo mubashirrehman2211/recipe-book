@@ -37,6 +37,10 @@ onMounted(() => {
       </p>
     </div>
   </div>
+
+  <DemoRecipes />
+
+
 </template>
 
 <style scoped></style>
