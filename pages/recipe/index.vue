@@ -4,12 +4,12 @@ import axios from "axios";
 
 const store = useRecipeStore();
 
-function selectRecipes(categoryName) {
-  console.log("name", categoryName);
-  axios
-    .get("https://nodeserver-sand.vercel.app/categorywise-list", categoryName)
+async function selectRecipes(categoryName) {
+  await axios
+    .post("https://nodeserver-sand.vercel.app/categorywise-list", categoryName)
     .then((res) => {
-      console.log(res.data, "category");
+      console.log(res, "category");
+      console.log("name", categoryName);
     })
     .catch((err) => {
       console.log(err, "error");
@@ -70,7 +70,7 @@ onMounted(() => {
 
   <div class="all-center w-full my-40">
     <div class="font-sans font-semibold">
-      Category wise data will appear here inshallah
+      Category wise data will appear here
     </div>
   </div>
 
