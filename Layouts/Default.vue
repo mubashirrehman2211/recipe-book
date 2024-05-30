@@ -9,5 +9,7 @@
     <div class="content flex-grow">
       <slot />
     </div>
+
+    <Footer />
   </main>
 </template>

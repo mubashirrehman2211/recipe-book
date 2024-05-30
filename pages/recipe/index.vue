@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <div>
-    <h2>Recipes</h2>
-  </div>
+  <div class="bg-image"></div>
+
+ 
 </template>
 
-<style></style>
+<style scoped></style>

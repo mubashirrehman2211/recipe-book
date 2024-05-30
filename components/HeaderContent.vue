@@ -24,11 +24,11 @@ const store = useRecipeStore();
       </h2>
       <h4 class="slogan text-3xl my-2">A Recipe for Every Occasion</h4>
       <div class="mt-5">
-        <NuxtLink to="">
+        <NuxtLink to="/recipe">
           <button
             class="login-btn border-2 border-[#3bc195] font-semibold text-gray-100 px-10 h-12 bg-[#3bc195] rounded hover:bg-gray-200 hover:border-gray-200 hover:text-gray-900 duration-700"
           >
-            Sign Up | Sign In
+            RECIPES
           </button>
         </NuxtLink>
       </div>
