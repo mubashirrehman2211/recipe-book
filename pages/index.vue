@@ -21,6 +21,7 @@ onMounted(() => {
   <Satisfacttion />
 
   <DemoRecipes />
+  <Footer />
 </template>
 
 <style scoped>

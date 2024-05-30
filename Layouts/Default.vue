@@ -3,13 +3,13 @@
 </script>
 
 <template>
-  <main class="min-h-screen min-w-screen flex flex-col">
+  <main class="min-h-screen flex flex-col">
     <!-- <Navbar /> -->
 
     <div class="content flex-grow">
       <slot />
     </div>
 
-    <Footer />
+  
   </main>
 </template>
