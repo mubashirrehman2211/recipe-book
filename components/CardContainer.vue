@@ -8,7 +8,7 @@ import ShieldCheck from "nvd-u/icons/ShieldCheck.vue";
 </script>
 
 <template>
-  <div class="card-container grid grid-cols-3 mt-10 gap-5">
+  <div class="card-container all-center flex-wrap w-full">
     <Card
       title="Quality Content"
       desc="Enjoy high-quality content, including articles, videos, and blogs that inspire and inform."
@@ -53,4 +53,4 @@ import ShieldCheck from "nvd-u/icons/ShieldCheck.vue";
   </div>
 </template>
 
-<style></style>
+<style scoped></style>

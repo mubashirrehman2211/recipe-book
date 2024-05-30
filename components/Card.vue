@@ -5,11 +5,17 @@ defineProps(["title", "desc"]);
 <template>
   <div class="card p-4 w-[400px]">
     <slot />
-    <h2 class="text-2xl text-gray-500 poppins-medium">{{ title }}</h2>
+    <h2 class="text-xl text-gray-500 poppins-medium">{{ title }}</h2>
     <p class="text-sm text-gray-500 poppins-medium">
       {{ desc }}
     </p>
   </div>
 </template>
 
-<style></style>
+<style scoped>
+@media screen and (max-width: 400px) {
+  .card {
+    width: 300px;
+  }
+}
+</style>

@@ -10,20 +10,20 @@ const store = useRecipeStore();
 <template>
   <SocialIcons />
 
-  <div class="bg-[#1d2331] p-10">
-    <div class="flex text-start justify-evenly mr-40">
-      <div class="all-center flex-col">
+  <div class="footer-container bg-[#1d2331] p-10">
+    <div class="footer flex text-start justify-evenly flex-wrap mr-40">
+      <div class="all-center flex-col div-1">
         <h2 class="text-xl text-gray-200 font-semibold poppins-medium mt-0">
           COOKING BOOK
         </h2>
-        <p class="text-start justify-start text-[#757a7f] w-60 ml-24">
+        <p class="main-desc text-start justify-start text-[#757a7f] w-60 ml-24">
           A cooking book, commonly known as a cookbook, is a collection of
           recipes, instructions, and information about the preparation and
           cooking of various dishes.
         </p>
       </div>
 
-      <div>
+      <div class="div-2">
         <h2 class="text-xl text-gray-200 font-semibold poppins-medium">
           RECIPES
         </h2>
@@ -38,7 +38,7 @@ const store = useRecipeStore();
         </div>
       </div>
 
-      <div>
+      <div class="useful-links div-3">
         <h2 class="text-xl text-gray-200 font-semibold poppins-medium">
           USEFUL LINKS
         </h2>
@@ -58,7 +58,7 @@ const store = useRecipeStore();
         </div>
       </div>
 
-      <div>
+      <div class="div-4">
         <h2 class="text-xl text-gray-200 font-semibold poppins-medium">
           CONTACT
         </h2>
@@ -87,4 +87,33 @@ const store = useRecipeStore();
   </div>
 </template>
 
-<style></style>
+<style scoped>
+@media screen and (max-width: 924px) {
+  h2,
+  div {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .footer-container {
+    padding: 20px 0;
+  }
+
+  .footer {
+    margin-right: 0;
+  }
+
+  .main-desc {
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    word-wrap: break-word;
+    margin: 0 10px;
+  }
+
+  .useful-links {
+    display: none;
+  }
+}
+</style>
