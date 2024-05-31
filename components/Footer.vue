@@ -5,6 +5,10 @@ import Phone from "nvd-u/icons/Phone.vue";
 import PhoneClassic from "nvd-u/icons/PhoneClassic.vue";
 
 const store = useRecipeStore();
+
+onMounted(() => {
+  store.loadRecipes();
+});
 </script>
 
 <template>
@@ -13,7 +17,7 @@ const store = useRecipeStore();
   <div class="footer-container bg-[#1d2331] p-10">
     <div class="footer flex text-start justify-evenly flex-wrap mr-40">
       <div class="all-center flex-col div-1">
-        <Logo />
+        <Logo class="my-2" />
         <p class="main-desc text-start justify-start text-[#757a7f] w-60 ml-24">
           A cooking book, commonly known as a cookbook, is a collection of
           recipes, instructions, and information about the preparation and

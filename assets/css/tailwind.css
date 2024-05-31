@@ -44,7 +44,7 @@ html {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 8s infinite;
+    animation: typing 5s linear;
 }
 
 /* cursor blinking */

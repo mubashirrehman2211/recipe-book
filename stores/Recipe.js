@@ -7,6 +7,8 @@ export const useRecipeStore = defineStore("recipe", {
     demoRecipes: null,
     recipeByName: null,
     selectedCategory: null,
+    recipeId: null,
+    recipeDetail: null,
     recipeByNameLoader: false,
     error: null,
   }),
@@ -34,10 +36,30 @@ export const useRecipeStore = defineStore("recipe", {
         })
         .then((res) => {
           this.recipeByName = res.data.meals;
-          this.recipeByNameLoader = false;
+          localStorage.setItem("data", this.recipeByName);
           if (this.recipeByName?.length >= 10) {
             this.recipeByName = this.recipeByName.slice(0, 10);
           }
+          this.recipeByNameLoader = false;
+        })
+        .catch((err) => {
+          console.log(err, "error");
+        });
+    },
+
+    async getRecipeDetail() {
+      let route = useRoute();
+      console.log(route.params.id, "route");
+      this.recipeId = route.params.id;
+      // this.recipeByNameLoader = true;
+      await axios
+        .post("https://nodeserver-sand.vercel.app/details", {
+          id: this.recipeId,
+        })
+        .then((res) => {
+          this.recipeDetail = res.data;
+          console.log(this.recipeDetail);
+          // this.recipeByNameLoader = false;
         })
         .catch((err) => {
           console.log(err, "error");

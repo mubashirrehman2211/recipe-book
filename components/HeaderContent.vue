@@ -6,13 +6,11 @@ const store = useRecipeStore();
   <header class="bg-image w-screen h-[90vh] bg-center bg-cover bg-fixed">
     <Logo />
     <div class="all-center flex-col mt-16">
-      <h2
-        class="heading text-7xl text-gray-500 font-thin poppins-medium mb-1 edit-2"
-      >
-        Welcome to
-        <span class="text-[#3bc195]">CookingBook.com</span>
-      </h2>
-      <h4 class="slogan text-3xl my-2">A Recipe for Every Occasion</h4>
+      <MainHeading
+        title="Welcome to"
+        spanTitle="CookingBook.com"
+        slogan="A Recipe for Every Occasion"
+      />
       <div class="mt-5">
         <NuxtLink to="/recipe">
           <button
@@ -33,9 +31,6 @@ const store = useRecipeStore();
 }
 
 @media screen and (max-width: 950px) {
-  .heading {
-    font-size: 3.5rem;
-  }
   .login-btn {
     padding: 0 1rem;
     height: 2rem;
@@ -43,60 +38,12 @@ const store = useRecipeStore();
   }
 }
 
-@media screen and (max-width: 765px) {
-  .heading {
-    font-size: 2.7rem;
-  }
-  .slogan {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 605px) {
-  .heading {
-    font-size: 2rem;
-  }
-
-  .slogan {
-    font-size: 1.3rem;
-  }
-}
-
 @media screen and (max-width: 425px) {
-  .heading {
-    font-size: 1.7rem;
-  }
-
-  .slogan {
-    font-size: 1.1rem;
-  }
-
   .login-btn {
     margin: 0.7rem 0;
     padding: 0 0.8rem;
     height: 1.7rem;
     font-size: 0.7rem;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .heading {
-    font-size: 1.4rem;
-  }
-
-  .slogan {
-    font-size: 1rem;
-  }
-
-  .logo {
-    width: 75px;
-    height: 75px;
-    font-size: 0.5rem;
-    padding: 1rem;
-  }
-
-  .icon {
-    font-size: 1.5rem;
   }
 }
 </style>
