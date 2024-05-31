@@ -10,7 +10,7 @@ const store = useRecipeStore();
       <div
         class="logo w-24 h-24 p-4 bg-gray-200 text-gray-800 all-center flex-col border-2 border-gray-200 rounded-full"
       >
-        <ChefHat class="text-4xl" />
+        <ChefHat class="text-4xl icon" />
         <h2 class="mt-0 font-semibold">Cooking Book</h2>
       </div>
     </nav>
@@ -102,6 +102,10 @@ const store = useRecipeStore();
     height: 75px;
     font-size: 0.5rem;
     padding: 1rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
   }
 }
 </style>

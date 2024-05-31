@@ -15,7 +15,7 @@ onMounted(() => {
       <div
         class="logo w-24 h-24 p-4 bg-gray-200 text-gray-800 all-center flex-col border-2 border-gray-200 rounded-full"
       >
-        <ChefHat class="text-4xl" />
+        <ChefHat class="text-4xl icon" />
         <h2 class="mt-0 font-semibold">Cooking Book</h2>
       </div>
     </nav>
@@ -110,10 +110,14 @@ onMounted(() => {
 
 @media screen and (max-width: 425px) {
   .logo {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     font-size: 0.5rem;
-    padding: 1rem;
+    padding: 0;
+  }
+
+  .icon {
+    font-size: 1.5rem;
   }
 }
 
