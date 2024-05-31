@@ -114,7 +114,7 @@ onMounted(() => {
     text-align: center;
     justify-content: center;
     word-wrap: break-word;
-    margin: 0 10px;
+    margin: 20px 10px;
   }
 
   .useful-links {

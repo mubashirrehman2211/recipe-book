@@ -7,7 +7,7 @@ import Twitter from "nvd-u/icons/Twitter.vue";
 
 <template>
   <div
-    class="border-2 border-[#33a17c] bg-[#33a17c] text-gray-200 text-center flex justify-around"
+    class="border-2 border-[#33a17c] bg-[#33a17c] text-gray-200 text-center flex justify-around py-2"
   >
     <p class="mr-60 head">Get connected with us on social networks!</p>
     <div class="all-center gap-5 icons">

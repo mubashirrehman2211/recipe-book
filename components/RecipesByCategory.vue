@@ -40,4 +40,3 @@ const store = useRecipeStore();
   }
 }
 </style>
->

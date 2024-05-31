@@ -36,7 +36,7 @@ export const useRecipeStore = defineStore("recipe", {
         })
         .then((res) => {
           this.recipeByName = res.data.meals;
-          localStorage.setItem("data", this.recipeByName);
+          localStorage.setItem("data", JSON.stringify(this.recipeByName));
           if (this.recipeByName?.length >= 10) {
             this.recipeByName = this.recipeByName.slice(0, 10);
           }
@@ -64,6 +64,14 @@ export const useRecipeStore = defineStore("recipe", {
         .catch((err) => {
           console.log(err, "error");
         });
+    },
+
+    loadRelatedRecipes() {
+      this.recipeByName = JSON.parse(localStorage.getItem("data"));
+      this.recipeByName = Math.floor(Math.random() * this.recipeByName);
+      if (this.recipeByName?.length >= 10) {
+        this.recipeByName = this.recipeByName?.slice(0, 3);
+      }
     },
   },
 });
