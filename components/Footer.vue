@@ -13,9 +13,7 @@ const store = useRecipeStore();
   <div class="footer-container bg-[#1d2331] p-10">
     <div class="footer flex text-start justify-evenly flex-wrap mr-40">
       <div class="all-center flex-col div-1">
-        <h2 class="text-xl text-gray-200 font-semibold poppins-medium mt-0">
-          COOKING BOOK
-        </h2>
+        <Logo />
         <p class="main-desc text-start justify-start text-[#757a7f] w-60 ml-24">
           A cooking book, commonly known as a cookbook, is a collection of
           recipes, instructions, and information about the preparation and
@@ -28,13 +26,16 @@ const store = useRecipeStore();
           RECIPES
         </h2>
         <div class="mt-5">
-          <div
-            v-for="recipe in store?.demoRecipes"
-            :key="recipe.id"
-            class="text-lg font-semibold poppins-medium text-[#757a7f] hover:text-gray-200 duration-500 cursor-pointer"
-          >
-            {{ recipe?.strCategory }}
-          </div>
+          <NuxtLink to="/recipe">
+            <div
+              v-for="recipe in store?.demoRecipes"
+              :key="recipe.id"
+              class="text-lg font-semibold poppins-medium text-[#757a7f] hover:text-gray-200 duration-500 cursor-pointer"
+              @click="store.selectRecipes(recipe?.strCategory)"
+            >
+              {{ recipe?.strCategory }}
+            </div>
+          </NuxtLink>
         </div>
       </div>
 

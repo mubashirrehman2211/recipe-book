@@ -1,20 +1,10 @@
 <script setup>
-import ChefHat from "nvd-u/icons/ChefHat.vue";
-
 const store = useRecipeStore();
 </script>
 
 <template>
   <header class="bg-image w-screen h-[90vh] bg-center bg-cover bg-fixed">
-    <nav class="mx-2">
-      <NuxtLink
-        to="/"
-        class="logo w-24 h-24 p-4 bg-gray-200 text-gray-800 all-center flex-col border-2 border-gray-200 rounded-full"
-      >
-        <ChefHat class="text-4xl icon" />
-        <h2 class="mt-0 font-semibold">Cooking Book</h2>
-      </NuxtLink>
-    </nav>
+    <Logo />
     <div class="all-center flex-col mt-16">
       <h2
         class="heading text-7xl text-gray-500 font-thin poppins-medium mb-1 edit-2"
