@@ -1,5 +1,6 @@
 <script setup>
 import ULoading from "nvd-u/components/ULoading.vue";
+import ChefHat from "nvd-u/icons/ChefHat.vue";
 
 const store = useRecipeStore();
 
@@ -10,15 +11,12 @@ onMounted(() => {
 
 <template>
   <div class="bg-image w-screen h-[50vh] bg-cover bg-center bg-fixed">
-    <nav class="w-full">
-      <div class="flex">
-        <div class="w-[5%] m-4">
-          <img
-            src="/public/logo-1.png"
-            class="w-full rounded-full"
-            alt="logo"
-          />
-        </div>
+    <nav class="mx-2">
+      <div
+        class="logo w-24 h-24 p-4 bg-gray-200 text-gray-800 all-center flex-col border-2 border-gray-200 rounded-full"
+      >
+        <ChefHat class="text-4xl" />
+        <h2 class="mt-0 font-semibold">Cooking Book</h2>
       </div>
     </nav>
 
@@ -59,6 +57,7 @@ onMounted(() => {
     <h2 class="all-center text-2xl font-semibold">
       {{ store.selectedCategory }}
     </h2>
+    <ULoading v-if="store.recipeByNameLoader" class="my-10" />
     <div class="font-sans font-semibold" v-show="!store.recipeByName">
       Your filtered recipes will appear here
     </div>
@@ -66,7 +65,7 @@ onMounted(() => {
     <div class="card-container all-center flex-wrap">
       <div v-for="item in store?.recipeByName" :key="item?.id">
         <div class="card w-[400px]">
-          <img :src="item.strMealThumb" alt="img" class="rounded-xl" />
+          <img :src="item.strMealThumb" alt="img" class="w-full rounded-xl" />
           <h2 class="text-xl text-gray-800 font-semibold">
             {{ item?.strMeal }}
           </h2>
@@ -98,20 +97,38 @@ onMounted(() => {
 @media screen and (max-width: 660px) {
   .card {
     width: auto;
+    margin-top: 20px;
   }
 
   .heading {
     font-size: 1.7rem;
+  }
+  .bg-image {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .logo {
+    width: 75px;
+    height: 75px;
+    font-size: 0.5rem;
+    padding: 1rem;
   }
 }
 
 @media screen and (max-width: 330px) {
   .heading {
     font-size: 1.3rem;
+    margin-top: 50px;
   }
 
   .title {
     font-size: 1.3rem;
+  }
+
+  .bg-image {
+    height: 30vh;
   }
 }
 </style>

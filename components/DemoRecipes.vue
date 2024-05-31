@@ -25,8 +25,9 @@ const store = useRecipeStore();
             {{ recipe?.strCategory }}
           </h2>
           <div class="my-3 all-center">
-            <NuxtLink to="/recipes">
+            <NuxtLink to="/recipe">
               <button
+                @click="store.selectRecipes(recipe?.strCategory)"
                 class="border-2 border-[#3bc195] font-semibold text-gray-100 px-3 h-10 bg-[#3bc195] rounded hover:bg-gray-200 hover:border-gray-200 hover:text-gray-900 duration-700"
               >
                 Check Out

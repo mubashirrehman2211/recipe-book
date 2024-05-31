@@ -1,18 +1,17 @@
 <script setup>
+import ChefHat from "nvd-u/icons/ChefHat.vue";
+
 const store = useRecipeStore();
 </script>
 
 <template>
   <header class="bg-image w-screen h-[90vh] bg-center bg-cover bg-fixed">
-    <nav>
-      <div class="flex">
-        <div class="w-[5%] m-4">
-          <img
-            src="/public/logo-1.png"
-            class="w-full rounded-full"
-            alt="logo"
-          />
-        </div>
+    <nav class="mx-2">
+      <div
+        class="logo w-24 h-24 p-4 bg-gray-200 text-gray-800 all-center flex-col border-2 border-gray-200 rounded-full"
+      >
+        <ChefHat class="text-4xl" />
+        <h2 class="mt-0 font-semibold">Cooking Book</h2>
       </div>
     </nav>
     <div class="all-center flex-col mt-16">
@@ -96,6 +95,13 @@ const store = useRecipeStore();
 
   .slogan {
     font-size: 1rem;
+  }
+
+  .logo {
+    width: 75px;
+    height: 75px;
+    font-size: 0.5rem;
+    padding: 1rem;
   }
 }
 </style>

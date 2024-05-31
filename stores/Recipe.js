@@ -7,6 +7,7 @@ export const useRecipeStore = defineStore("recipe", {
     demoRecipes: null,
     recipeByName: null,
     selectedCategory: null,
+    recipeByNameLoader: false,
     error: null,
   }),
   getters: {},
@@ -26,12 +27,14 @@ export const useRecipeStore = defineStore("recipe", {
 
     async selectRecipes(categoryName) {
       this.selectedCategory = categoryName;
+      this.recipeByNameLoader = true;
       await axios
         .post("https://nodeserver-sand.vercel.app/categorywise-list", {
           category: categoryName,
         })
         .then((res) => {
           this.recipeByName = res.data.meals;
+          this.recipeByNameLoader = false;
           if (this.recipeByName?.length >= 10) {
             this.recipeByName = this.recipeByName.slice(0, 10);
           }
