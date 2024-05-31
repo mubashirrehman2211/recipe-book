@@ -12,12 +12,13 @@ onMounted(() => {
 <template>
   <div class="bg-image w-screen h-[50vh] bg-cover bg-center bg-fixed">
     <nav class="mx-2">
-      <div
+      <NuxtLink
+        to="/"
         class="logo w-24 h-24 p-4 bg-gray-200 text-gray-800 all-center flex-col border-2 border-gray-200 rounded-full"
       >
         <ChefHat class="text-4xl icon" />
         <h2 class="mt-0 font-semibold">Cooking Book</h2>
-      </div>
+      </NuxtLink>
     </nav>
 
     <div class="all-center">
