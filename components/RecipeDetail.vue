@@ -4,10 +4,10 @@ const store = useRecipeStore();
 <template>
   <RecipeHeader />
 
-  <ULoading v-if="!store.recipeDetail" />
   <!-- Ingredients Table -->
 
   <IngredientTable />
+  <ULoading v-if="!store.recipeDetail" />
 
   <!-- Instruction -->
 

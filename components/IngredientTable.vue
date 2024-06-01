@@ -5,7 +5,7 @@ const store = useRecipeStore();
 <template>
   <div class="all-center flex-col my-20 w-full">
     <div v-for="r in store?.recipeDetail" :key="r">
-      <h2 class="text-3xl text-gray-800 my-5 font-semibold">ingredients</h2>
+      <h2 class="text-3xl text-gray-800 my-5 font-semibold">Ingredients</h2>
 
       <div
         class="table mt-0 all-center mb-20 border-2 border-gray-300 p-2 e rounded shadow-sm"

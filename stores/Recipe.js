@@ -51,15 +51,13 @@ export const useRecipeStore = defineStore("recipe", {
       let route = useRoute();
       console.log(route.params.id, "route");
       this.recipeId = route.params.id;
-      // this.recipeByNameLoader = true;
+
       await axios
         .post("https://nodeserver-sand.vercel.app/details", {
           id: this.recipeId,
         })
         .then((res) => {
           this.recipeDetail = res.data;
-          console.log(this.recipeDetail);
-          // this.recipeByNameLoader = false;
         })
         .catch((err) => {
           console.log(err, "error");
@@ -69,7 +67,7 @@ export const useRecipeStore = defineStore("recipe", {
     loadRelatedRecipes() {
       this.recipeByName = JSON.parse(localStorage.getItem("data"));
       if (this.recipeByName?.length >= 3) {
-        this.recipeByName = this.recipeByName.slice(0, 4);
+        this.recipeByName = this.recipeByName.slice(0, 3);
       } else {
         this.recipeByName;
       }

@@ -11,7 +11,9 @@ import ShieldCheckOutline from "./nvd-u/icons/ShieldCheckOutline.vue";
       >
         100% Satisfaction Guarantee
       </h2>
-      <p class="s-desc w-[500px] text-left text-balance mt-3 font-semibold">
+      <p
+        class="s-desc w-[500px] text-gray-400 px-5 text-left text-balance mt-3 font-semibold"
+      >
         At CookingBook.com, your satisfaction is our top priority. We guarantee
         that every recipe, tip, and tool you find on our platform is designed to
         enhance your culinary journey. If for any reason you're not satisfied

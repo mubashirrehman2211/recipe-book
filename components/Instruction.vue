@@ -10,11 +10,13 @@ const store = useRecipeStore();
     v-for="r in store?.recipeDetail"
     :key="r"
   >
-    <h2 class="text-3xl text-start justify-start text-gray-800 font-semibold">
+    <h2
+      class="text-3xl text-start justify-start mb-2 text-gray-800 font-semibold"
+    >
       Instructions
     </h2>
     <div class="ins-desc">
-      <p class="font-serif mt-3">{{ r?.strInstructions }}</p>
+      <p class="font-serif mb-3 mt-0">{{ r?.strInstructions }}</p>
     </div>
 
     <!-- Youtube Link   -->
