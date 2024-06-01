@@ -17,14 +17,27 @@ import ChefHat from "nvd-u/icons/ChefHat.vue";
 <style scoped>
 @media screen and (max-width: 425px) {
   .logo {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     font-size: 0.5rem;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo {
+    width: 50px;
+    height: 50px;
+    font-size: 0.3rem;
+    padding: 3px;
+  }
+
+  .icon {
+    font-size: 1rem;
   }
 }
 </style>

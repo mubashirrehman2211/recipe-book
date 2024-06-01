@@ -43,6 +43,7 @@ defineProps(["title", "spanTitle", "slogan"]);
 @media screen and (max-width: 425px) {
   .heading {
     font-size: 1.7rem;
+    margin-top: 50px;
   }
 
   .slogan {
@@ -50,7 +51,7 @@ defineProps(["title", "spanTitle", "slogan"]);
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 350px) {
   .heading {
     font-size: 1.4rem;
   }

@@ -68,9 +68,10 @@ export const useRecipeStore = defineStore("recipe", {
 
     loadRelatedRecipes() {
       this.recipeByName = JSON.parse(localStorage.getItem("data"));
-      this.recipeByName = Math.floor(Math.random() * this.recipeByName);
-      if (this.recipeByName?.length >= 10) {
-        this.recipeByName = this.recipeByName?.slice(0, 3);
+      if (this.recipeByName?.length >= 3) {
+        this.recipeByName = this.recipeByName.slice(0, 4);
+      } else {
+        this.recipeByName;
       }
     },
   },
