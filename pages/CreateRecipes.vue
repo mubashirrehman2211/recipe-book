@@ -36,7 +36,7 @@ const store = useRecipeStore();
         />
       </div>
       <div class="flex flex-col text-start justify-start my-3">
-        <UFileUpload :files="store.newRecipe.image" accept="image/*" />
+        <!-- <UFileUpload :files="form.files" accept="image/*" /> -->
       </div>
       <div class="flex flex-col text-start justify-start my-3">
         <label class="my-2 text-[#3bc195] text-xl poppins-medium"
