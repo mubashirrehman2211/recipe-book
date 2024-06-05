@@ -4,6 +4,7 @@ import axios from "axios";
 export const useRecipeStore = defineStore("recipe", {
   state: () => ({
     recipes: null,
+    sidebar: false,
     demoRecipes: null,
     recipeByName: null,
     selectedCategory: null,
@@ -11,6 +12,13 @@ export const useRecipeStore = defineStore("recipe", {
     recipeDetail: null,
     recipeByNameLoader: false,
     error: null,
+    newRecipe: {
+      category: null,
+      name: null,
+      image: null,
+      ingredient: null,
+      instruction: null,
+    },
   }),
   getters: {},
   actions: {
