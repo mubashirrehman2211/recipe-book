@@ -20,8 +20,9 @@ const store = useRecipeStore();
           >Category Name</label
         >
         <input
+          v-model="store.newRecipe.category"
           type="text"
-          placeholder="Enter your Name"
+          placeholder="ex. Beef, Chicken"
           class="pr-5 pl-2 py-2 focus:outline-[#3bc195] border-2 rounded"
         />
       </div>
@@ -30,14 +31,15 @@ const store = useRecipeStore();
           >Recipe Name</label
         >
         <input
+          v-model="store.newRecipe.name"
           type="text"
-          placeholder="Enter your Name"
+          placeholder="Enter Recipe Name"
           class="pr-5 pl-2 py-2 focus:outline-[#3bc195] border-2 rounded"
         />
       </div>
-      <div class="flex flex-col text-start justify-start my-3">
-        <!-- <UFileUpload :files="form.files" accept="image/*" /> -->
-      </div>
+      <!-- <div class="flex flex-col text-start justify-start my-3">
+        <UFileUpload :files="store.images" accept="image/*" :max="1" />
+      </div> -->
       <div class="flex flex-col text-start justify-start my-3">
         <label class="my-2 text-[#3bc195] text-xl poppins-medium"
           >Ingredients</label
@@ -47,7 +49,8 @@ const store = useRecipeStore();
           id="Ingredients"
           cols="30"
           rows="10"
-          placeholder="Ex. Salt : 2 Spoon"
+          placeholder="ex. Salt : 2 Spoon"
+          v-model="store.newRecipe.ingredient"
         ></textarea>
       </div>
       <div class="flex flex-col text-start justify-start my-3">
@@ -55,6 +58,7 @@ const store = useRecipeStore();
           >Instruction</label
         >
         <textarea
+          v-model="store.newRecipe.instruction"
           class="pr-5 pl-2 py-2 focus:outline-[#3bc195] border-2 rounded"
           id="Instruction"
           cols="30"
@@ -78,5 +82,12 @@ const store = useRecipeStore();
 .bg-image {
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
     url("/public/recipes.jpg");
+}
+
+@media screen and (max-width: 660px) {
+  .card {
+    width: auto;
+    margin-top: 20px;
+  }
 }
 </style>

@@ -3,6 +3,7 @@ import Home from "nvd-u/icons/Home.vue";
 import Email from "nvd-u/icons/Email.vue";
 import Phone from "nvd-u/icons/Phone.vue";
 import PhoneClassic from "nvd-u/icons/PhoneClassic.vue";
+import ChefHat from "nvd-u/icons/ChefHat.vue";
 
 const store = useRecipeStore();
 
@@ -17,7 +18,15 @@ onMounted(() => {
   <div class="footer-container bg-[#1d2331] p-10">
     <div class="footer flex text-start justify-evenly flex-wrap mr-40">
       <div class="all-center flex-col div-1">
-        <Logo class="my-2" />
+        <li class="all-center flex-col">
+          <NuxtLink
+            to="/"
+            class="logo w-24 h-24 p-4 bg-gray-200 text-gray-800 all-center flex-col border-2 border-gray-200 rounded-full"
+          >
+            <ChefHat class="text-4xl icon" />
+            <h2 class="mt-0 font-semibold">Cooking Book</h2>
+          </NuxtLink>
+        </li>
         <p class="main-desc text-start justify-start text-[#757a7f] w-60 ml-24">
           A cooking book, commonly known as a cookbook, is a collection of
           recipes, instructions, and information about the preparation and

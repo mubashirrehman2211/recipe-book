@@ -33,10 +33,5 @@ const store = useRecipeStore();
 </template>
 
 <style scoped>
-@media screen and (max-width: 660px) {
-  .card {
-    width: auto;
-    margin-top: 20px;
-  }
-}
+
 </style>

@@ -12,10 +12,10 @@ export const useRecipeStore = defineStore("recipe", {
     recipeDetail: null,
     recipeByNameLoader: false,
     error: null,
+    images: [],
     newRecipe: {
       category: null,
       name: null,
-      image: null,
       ingredient: null,
       instruction: null,
     },
