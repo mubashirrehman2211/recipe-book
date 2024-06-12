@@ -1,4 +1,5 @@
 <script setup>
+import RecipeForm from "~/components/RecipeForm.vue";
 const store = useRecipeStore();
 onMounted(() => {
   store.loadRecipes();
@@ -18,7 +19,8 @@ onMounted(() => {
     <CardContainer class="mb-5" />
   </div>
 
-  <Satisfacttion />
+ 
+  <RecipeForm />
 
   <DemoRecipes />
   <Footer />

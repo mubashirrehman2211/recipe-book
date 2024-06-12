@@ -13,7 +13,8 @@ export const useRecipeStore = defineStore("recipe", {
     recipeByNameLoader: false,
     error: null,
     images: [],
-    newRecipe: {
+    addRecipe: {
+      id: null,
       category: null,
       name: null,
       ingredient: null,
@@ -27,7 +28,21 @@ export const useRecipeStore = defineStore("recipe", {
         .get("https://nodeserver-sand.vercel.app/all")
         .then((response) => {
           this.recipes = response.data;
+          // console.log(this.recipes, "ress");
           this.demoRecipes = this.recipes?.slice(0, 6);
+        })
+        .catch((error) => {
+          this.error = error.message;
+          console.log("error", this.error);
+        });
+    },
+
+    async addNewRecipe() {
+      this.addRecipe.id = Math.floor(Math.random() * 90000) + 10000;
+      await axios
+        .post("http://localhost:8888/addRecipe", { newRecipe: this.addRecipe })
+        .then((response) => {
+          this.msg = response.data;
         })
         .catch((error) => {
           this.error = error.message;
@@ -47,6 +62,7 @@ export const useRecipeStore = defineStore("recipe", {
           localStorage.setItem("data", JSON.stringify(this.recipeByName));
           if (this.recipeByName?.length >= 10) {
             this.recipeByName = this.recipeByName.slice(0, 10);
+            console.log(this.recipeByName, "chicken");
           }
           this.recipeByNameLoader = false;
         })
