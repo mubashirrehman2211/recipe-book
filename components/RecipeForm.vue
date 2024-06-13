@@ -1,4 +1,6 @@
 <script setup>
+import UButton from "nvd-u/components/UButton.vue";
+import CheckCircle from "nvd-u/icons/CheckCircle.vue";
 const store = useRecipeStore();
 </script>
 
@@ -34,9 +36,15 @@ const store = useRecipeStore();
           class="pr-5 pl-2 py-2 focus:outline-[#3bc195] border-2 rounded"
         />
       </div>
-      <!-- <div class="flex flex-col text-start justify-start my-3">
-            <UFileUpload :files="store.images" accept="image/*" :max="1" />
-          </div> -->
+      <form
+        action="/addRecipe"
+        method="post"
+        enctype="multipart/form-data"
+        class="flex flex-col text-start justify-start my-3"
+      >
+        <label class="my-2 text-[#3bc195] text-xl poppins-medium">Image</label>
+        <input type="file" name="image" v-on:change="store.uploadImage" />
+      </form>
       <div class="flex flex-col text-start justify-start my-3">
         <label class="my-2 text-[#3bc195] text-xl poppins-medium"
           >Ingredients</label
@@ -56,6 +64,7 @@ const store = useRecipeStore();
         >
         <textarea
           v-model="store.addRecipe.instruction"
+          :class="{ ' focus:outline-red-600': !store.addRecipe.instruction }"
           class="pr-5 pl-2 py-2 focus:outline-[#3bc195] border-2 rounded"
           id="Instruction"
           cols="30"
@@ -63,15 +72,44 @@ const store = useRecipeStore();
           rows="10"
         ></textarea>
       </div>
+      <div v-if="store.addedError" class="text-red-500 font-semibold">
+        {{ store.addedError }}
+      </div>
+      <div class="all-center">
+        <UButton
+          class="login-btn my-3 font-semibold rounded hover:bg-gray-200 hover:border-gray-200"
+          @click="store.addNewRecipe()"
+        >
+          Add Recipe
+        </UButton>
+      </div>
+      <MainLoader v-if="store.popup">
+        <div class="all-center flex-col w-[300px] bg-white rounded-xl p-2">
+          <CheckCircle class="text-[#3bc195] animate-bounce duration-500" />
+          <h2 class="text-2xl">
+            {{ store.addedMsg }}
+          </h2>
 
-      <button
-        class="login-btn my-3 border-2 border-[#3bc195] font-semibold text-gray-100 px-10 h-12 bg-[#3bc195] rounded hover:bg-gray-200 hover:border-gray-200 hover:text-gray-900 duration-700"
-        @click="store.addNewRecipe()"
-      >
-        Add Recipe
-      </button>
+          <UButton class="login-btn py-3" @click="store.viewNewRecipe">
+            <NuxtLink :to="`/${store.addRecipe?.id}`" class="text-gray-100"
+              >View Recipe</NuxtLink
+            >
+          </UButton>
+          <UButton
+            class="login-btn py-3 mt-4"
+            @click="() => (store.popup = false)"
+            >OK</UButton
+          >
+        </div>
+      </MainLoader>
     </div>
   </div>
 </template>
 
-<style></style>
+<style scoped>
+.login-btn {
+  border: 2px solid #3bc195 !important;
+  background: #3bc195 !important;
+  color: #fefefe;
+}
+</style>

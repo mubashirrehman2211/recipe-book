@@ -1,5 +1,6 @@
 <script setup>
 import RecipeForm from "~/components/RecipeForm.vue";
+import UButton from "nvd-u/components/UButton.vue";
 const store = useRecipeStore();
 onMounted(() => {
   store.loadRecipes();
